@@ -128,5 +128,6 @@ int main() {
     printf("%4f",avg_WT);
 
 
-    return 0;
+    return 0 ;
 }
+
