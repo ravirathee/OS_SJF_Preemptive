@@ -1,5 +1,6 @@
 //Ravi Rathee
 //OS_ShortestJobFirst_Pre-emptive
+
 #include <stdio.h>
 
 int main() {
@@ -9,9 +10,8 @@ int main() {
     scanf("%d", &n);
     printf("\nNumber of processes entered : %d\n", n);
 
-    int AT[20] = {0}, at_i = 0;                 //Arrival Time
-    int BT[20] = {0}, bt_i = 0;                 //Burst   Time
-    int P[20] = {0}, p_i = 0;                   //Priority
+    int AT[20] = {0};                           //Arrival Time
+    int BT[20] = {0};                           //Burst   Time
     int RT[20] = {0};                           //Remaining Time
     int CT[20] = {0};                           //Completion Time
     int TAT[20] = {0};                          //Turn-Around Time
@@ -128,6 +128,244 @@ int main() {
     printf("%4f",avg_WT);
 
 
-    return 0 ;
+    return 0;
 }
 
+/*
+OUTPUT
+
+/Users/ravirathee/CLionProjects/OS_SJF_Preemptive/cmake-build-debug/OS_SJF_Preemptive
+Enter the number of processes : 4
+
+Number of processes entered : 4
+
+Enter Arrival time of processes:
+0
+1
+2
+3
+Arrival Time: 0 1 2 3
+
+Enter Burst time of processes :
+8
+4
+9
+5
+
+
+
+Processes Arrived : 1
+Time : 0
+Smallest : 8
+Smallest_pos : 0
+Remaining Time: 7 4 9 5
+Completion Time: 0 0 0 0
+
+
+Processes Arrived : 2
+Time : 1
+Smallest : 4
+Smallest_pos : 1
+Remaining Time: 7 3 9 5
+Completion Time: 0 0 0 0
+
+
+Processes Arrived : 3
+Time : 2
+Smallest : 3
+Smallest_pos : 1
+Remaining Time: 7 2 9 5
+Completion Time: 0 0 0 0
+
+
+Processes Arrived : 4
+Time : 3
+Smallest : 2
+Smallest_pos : 1
+Remaining Time: 7 1 9 5
+Completion Time: 0 0 0 0
+
+
+Processes Arrived : 4
+Time : 4
+Smallest : 1
+Smallest_pos : 1
+Remaining Time: 7 0 9 5
+Completion Time: 0 5 0 0
+
+
+Processes Arrived : 4
+Time : 5
+Smallest : 5
+Smallest_pos : 3
+Remaining Time: 7 0 9 4
+Completion Time: 0 5 0 0
+
+
+Processes Arrived : 4
+Time : 6
+Smallest : 4
+Smallest_pos : 3
+Remaining Time: 7 0 9 3
+Completion Time: 0 5 0 0
+
+
+Processes Arrived : 4
+Time : 7
+Smallest : 3
+Smallest_pos : 3
+Remaining Time: 7 0 9 2
+Completion Time: 0 5 0 0
+
+
+Processes Arrived : 4
+Time : 8
+Smallest : 2
+Smallest_pos : 3
+Remaining Time: 7 0 9 1
+Completion Time: 0 5 0 0
+
+
+Processes Arrived : 4
+Time : 9
+Smallest : 1
+Smallest_pos : 3
+Remaining Time: 7 0 9 0
+Completion Time: 0 5 0 10
+
+
+Processes Arrived : 4
+Time : 10
+Smallest : 7
+Smallest_pos : 0
+Remaining Time: 6 0 9 0
+Completion Time: 0 5 0 10
+
+
+Processes Arrived : 4
+Time : 11
+Smallest : 6
+Smallest_pos : 0
+Remaining Time: 5 0 9 0
+Completion Time: 0 5 0 10
+
+
+Processes Arrived : 4
+Time : 12
+Smallest : 5
+Smallest_pos : 0
+Remaining Time: 4 0 9 0
+Completion Time: 0 5 0 10
+
+
+Processes Arrived : 4
+Time : 13
+Smallest : 4
+Smallest_pos : 0
+Remaining Time: 3 0 9 0
+Completion Time: 0 5 0 10
+
+
+Processes Arrived : 4
+Time : 14
+Smallest : 3
+Smallest_pos : 0
+Remaining Time: 2 0 9 0
+Completion Time: 0 5 0 10
+
+
+Processes Arrived : 4
+Time : 15
+Smallest : 2
+Smallest_pos : 0
+Remaining Time: 1 0 9 0
+Completion Time: 0 5 0 10
+
+
+Processes Arrived : 4
+Time : 16
+Smallest : 1
+Smallest_pos : 0
+Remaining Time: 0 0 9 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 17
+Smallest : 9
+Smallest_pos : 2
+Remaining Time: 0 0 8 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 18
+Smallest : 8
+Smallest_pos : 2
+Remaining Time: 0 0 7 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 19
+Smallest : 7
+Smallest_pos : 2
+Remaining Time: 0 0 6 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 20
+Smallest : 6
+Smallest_pos : 2
+Remaining Time: 0 0 5 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 21
+Smallest : 5
+Smallest_pos : 2
+Remaining Time: 0 0 4 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 22
+Smallest : 4
+Smallest_pos : 2
+Remaining Time: 0 0 3 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 23
+Smallest : 3
+Smallest_pos : 2
+Remaining Time: 0 0 2 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 24
+Smallest : 2
+Smallest_pos : 2
+Remaining Time: 0 0 1 0
+Completion Time: 17 5 0 10
+
+
+Processes Arrived : 4
+Time : 25
+Smallest : 1
+Smallest_pos : 2
+Remaining Time: 0 0 0 0
+Completion Time: 17 5 26 10
+Completion Time: 17 5 26 10
+Turn Around Time: 17 4 24 7
+Waiting Time: 9 0 15 2
+
+Average Turn Around Time : 13.000000
+Average Waiting Time : 6.500000
+Process finished with exit code 0
+
+*/
